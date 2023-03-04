@@ -7,6 +7,14 @@ Class {
 	#category : #'MyCounter-Tests'
 }
 
+{ #category : #tests }
+CounterTest >> testCount [
+
+	|c|
+	c := Counter new count: 7.
+	self assert: c count equals: 7
+]
+
 { #category : #test }
 CounterTest >> testDecrement [
 
