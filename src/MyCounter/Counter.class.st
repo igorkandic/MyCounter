@@ -7,7 +7,7 @@ Its API is
 Its creation API is message startingAt:
 "
 Class {
-	#name : #MyClass,
+	#name : #Counter,
 	#superclass : #Object,
 	#instVars : [
 		'counter'
@@ -16,11 +16,21 @@ Class {
 }
 
 { #category : #accessing }
-MyClass >> count [
+Counter >> count [
 	^ counter
 ]
 
 { #category : #setter }
-MyClass >> count: anInteger [
+Counter >> count: anInteger [
 	counter := anInteger 
+]
+
+{ #category : #accessing }
+Counter >> decrement [
+	counter := counter - 1
+]
+
+{ #category : #accessing }
+Counter >> increment [
+	counter := counter + 1
 ]
