@@ -15,7 +15,14 @@ CounterTest >> testCount [
 	self assert: c count equals: 7
 ]
 
-{ #category : #test }
+{ #category : #tests }
+CounterTest >> testCounterStartsAt5 [
+	|c|
+	c := Counter startingAt: 5.
+	self assert: c count equals: 5
+]
+
+{ #category : #tests }
 CounterTest >> testDecrement [
 
 	|c|
@@ -24,11 +31,19 @@ CounterTest >> testDecrement [
 	self assert: c count equals: 0
 ]
 
-{ #category : #test }
+{ #category : #tests }
 CounterTest >> testIncrement [
 
 	|c|
 	c := Counter new count: 0.
 	c increment ; increment.
 	self assert: c count equals: 2
+]
+
+{ #category : #tests }
+CounterTest >> testInitialize [
+
+	|c|
+	c := Counter new.
+	self assert: c count equals: 0
 ]
